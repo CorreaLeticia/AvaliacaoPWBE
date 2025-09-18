@@ -1,0 +1,265 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1755774212400
+  modified: 1755774212400
+  description: ""
+collection:
+  - name: Biblioteca
+    meta:
+      id: fld_8a78d7e982b64ac09da5d471a005f2ee
+      created: 1755785977417
+      modified: 1756991862198
+      sortKey: -1755785990596
+      description: ""
+    children:
+      - name: Usuarios
+        meta:
+          id: fld_83fdf58ee155403d9a1f65de2c5a3998
+          created: 1755785990496
+          modified: 1756991891392
+          sortKey: -1756991865597
+          description: ""
+      - name: Livros
+        meta:
+          id: fld_f87da11a938a46f2bcb76fb70941f0b2
+          created: 1756389502400
+          modified: 1756991865539
+          sortKey: -1756991865497
+          description: ""
+  - name: Escola
+    meta:
+      id: fld_985e4d5b03cc4ba49e67b75433ad120d
+      created: 1756991900487
+      modified: 1757599800736
+      sortKey: -1756991900487
+      description: ""
+    children:
+      - name: Professores
+        meta:
+          id: fld_7e432bbe6460402d9855436f9fc4ab05
+          created: 1756991956819
+          modified: 1756991960744
+          sortKey: -1756991960681
+          description: ""
+      - name: Disciplinas
+        meta:
+          id: fld_60aacf6719384a6f8259ca13d540a9e4
+          created: 1757005275416
+          modified: 1757007828791
+          sortKey: -1756991960781
+          description: ""
+  - name: Loja
+    meta:
+      id: fld_8c1f04a1034344dca2defdcc88fda63b
+      created: 1757599644566
+      modified: 1758196553951
+      sortKey: -1757599765836
+      description: ""
+    children:
+      - url: http://localhost:3000/clientes
+        name: Cadastrar Cliente
+        meta:
+          id: req_e9182b26df4a471d8653ecc7206b44db
+          created: 1758196569798
+          modified: 1758203321634
+          isPrivate: false
+          description: ""
+          sortKey: -1758196569798
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "Nome completo": "Miguel Gerbi",
+              "E-mail": "miguel.gerbi@gmail.com",
+              "CPF": "111.222.333-44",
+              "Telefone": "(11) 998877665",
+              "Endereço": "Rua Nova, 55, Amparo SP"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.5.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/produto
+        name: Cadastrar Produto
+        meta:
+          id: req_a91f9f01eb314744a32516e03f23e7da
+          created: 1758201106755
+          modified: 1758204885099
+          isPrivate: false
+          description: ""
+          sortKey: -1758196971611
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"id":"174",
+              "nome": "Chinelo",
+              "descricao": "Havaianas, tamanho 36",
+              "preco": 39.90,
+              "quantidade_estoque": 25
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/pedidos
+        name: Cadastrar Pedido
+        meta:
+          id: req_bc4b46b95ff04974970f01998d8c075e
+          created: 1758202819606
+          modified: 1758203910310
+          isPrivate: false
+          description: ""
+          sortKey: -1758196971711
+        method: GET
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "cliente_id": 1,
+              "produto_id": 173,
+              "quantidade": 2,
+              "data_compra": "2025-09-18",
+              "status": "pendente"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/produtos
+        name: Consultar Produtos
+        meta:
+          id: req_0897bbddd9fc49dab87a9056699de287
+          created: 1758202885897
+          modified: 1758202917565
+          isPrivate: false
+          description: ""
+          sortKey: -1758196971811
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/produtos/170
+        name: Atualizar Produtos
+        meta:
+          id: req_d71c5b2b271340908d93c460ba449007
+          created: 1758202931365
+          modified: 1758204787438
+          isPrivate: false
+          description: ""
+          sortKey: -1758196971761
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "preco": 54.90,
+              "quantidade_estoque": 95
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/produto/170
+        name: Excluir Produto
+        meta:
+          id: req_7ed74053f0164b55af9799f94f2b7e28
+          created: 1758203002793
+          modified: 1758204830649
+          isPrivate: false
+          description: ""
+          sortKey: -1758196972211
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/pedidos/A1B2C3
+        name: Atualizar Status
+        meta:
+          id: req_b9f3c7b7e8814d6cbee5be465ba0ed57
+          created: 1758203062995
+          modified: 1758203127931
+          isPrivate: false
+          description: ""
+          sortKey: -1758196972111
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1755785082773
+    modified: 1755785082773
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1755785082605
+    modified: 1755785082605
+    isPrivate: false
